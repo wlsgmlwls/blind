@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "boardtbl")
@@ -44,7 +45,7 @@ public class Board {
 
   @Column(name = "b_date")
   @CreationTimestamp
-  private String bDate;
+  private Timestamp bDate;
 
 
 }
