@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface BoardFileRepository
     extends CrudRepository<BoardFiles, Long> {
-    List<BoardFiles> findByBfid(Board board);
+  //  List<BoardFiles> findByBfid(Board board);
 }
