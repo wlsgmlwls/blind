@@ -1,5 +1,6 @@
 package com.jsframe.blind.service;
 
+
 import com.jsframe.blind.entity.Member;
 import com.jsframe.blind.repository.SingUpRepository;
 import lombok.extern.java.Log;
@@ -29,4 +30,6 @@ public String reMember(MemberService member, RedirectAttributes rttr){
     return view;
 }
 
+
+public class MemberService {
 }
