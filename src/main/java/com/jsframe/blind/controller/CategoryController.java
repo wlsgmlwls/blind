@@ -6,12 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @Log
-public class BoardController {
-
-  @GetMapping("/")
-  public String main(){
-    log.info("main()");
-    return "main";
-  }
-
+public class CategoryController {
+@GetMapping("topic")
+  public String topic(){
+  log.info("topic()");
+  return "topic";
+}
 }

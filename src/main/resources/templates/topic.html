@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+      li {
+          float: left;
+          list-style: none;
+          margin-left: 10px;
+      }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+          integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+          crossorigin="anonymous"></script>
 </head>
 <body>
-text for test
+<header style="height : 80px; width: 100%;border: 1px solid black">
+
+</header>
+<section>
+  <div>
+    <ul>
+      <li>토픽 전체</li>
+      <li>토픽 베스트</li>
+      <li>블라블라</li>
+      <li>회사생활</li>
+      <li>주식/투자</li>
+      <li>썸 연애</li>
+      <li>결혼</li>
+      <li>라이프</li>
+    </ul>
+  </div>
+
+  <div class="post_wrap">
+    <div class="content_wrap">
+      <div class="title">
+      </div>
+      <div class="content"></div>
+    </div>
+    <div class=""></div>
+  </div>
+
+
+</section>
+
+
 </body>
+<script>
+    //카테고리 클릭 -> 해당 카테고리 목록 조회 -> topic에 출력
+    $("li").click(() => {
+        let category = $(this).text();
+        $.ajax({
+            type: 'get',
+            url: "category",
+            data: {"category": category},
+            success: function (result) {
+                $//("").empty();
+                if (result.length === 0) {
+                    alert("해당 카테고리에 작성된 글이 없습니다.");
+                    //start();
+                }
+               // $.each(result, function (idx, post) {
+                //}
+            },
+            error: function (error) {
+
+            }
+        });
+
+    })
+</script>
 </html>
