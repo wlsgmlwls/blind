@@ -40,7 +40,7 @@ public class BoardService {
         Pageable pb = (Pageable) PageRequest.of((pageNum - 1), listCnt,
                 Sort.Direction.DESC, "bNo");
 
-        Page<Board> result = bRepo.findByBnumGreaterThan(0L, pb);
+        Page<Board> result = bRepo.findByBnoGreaterThan(0L, pb);
         List<Board> bList = result.getContent();
         int totalPage = result.getTotalPages();
 
