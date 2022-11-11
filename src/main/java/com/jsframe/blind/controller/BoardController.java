@@ -26,18 +26,19 @@ public class BoardController {
         return "main";
     }
 
+//
+//    ModelAndView mv;
+//    @Autowired
+//    private BoardService bSev;
 
-    ModelAndView mv;
-    @Autowired
-    private BoardService bSev;
+//    @GetMapping("/")
+//    public ModelAndView getList(Integer pageNum, HttpSession session) {
+//        log.info("getList()");
+//        mv = bSev.getBoardList(pageNum, session);
+//
+//        return mv;
+//    }
 
-    @GetMapping("/")
-    public ModelAndView getList(Integer pageNum, HttpSession session) {
-        log.info("getList()");
-        mv = bSev.getBoardList(pageNum, session);
-
-        return mv;
-    }
 }
 
 
