@@ -20,11 +20,11 @@ import javax.servlet.http.HttpSession;
 public class BoardController {
 
 
-  @GetMapping("/")
-  public String main(){
-    log.info("main()");
-    return "main";
-  }
+    @GetMapping("/")
+    public String main() {
+        log.info("main()");
+        return "main";
+    }
 
 
     ModelAndView mv;
@@ -32,11 +32,12 @@ public class BoardController {
     private BoardService bSev;
 
     @GetMapping("/")
-    public ModelAndView getList(Integer pageNum, HttpSession session){
+    public ModelAndView getList(Integer pageNum, HttpSession session) {
         log.info("getList()");
         mv = bSev.getBoardList(pageNum, session);
 
         return mv;
     }
-
 }
+
+
