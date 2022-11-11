@@ -21,7 +21,6 @@ public class Comment {
 
   @ManyToOne
   @JoinColumn(name="b_no")
-  @Column(name="b_no")
   private Board bNo;
 
 
